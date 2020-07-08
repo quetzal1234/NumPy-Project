@@ -6,10 +6,12 @@ Assignment on Numpy: "High-Tech Sculptures"
 See assignment instructions in the README.md document AND in the
 TO DO comments below.
 """
-
+import glob
 import numpy as np
 from scipy.ndimage import center_of_mass
+from scipy.spatial import ConvexHull, convex_hull_plot_2d
 from typing import List
+
 
 
 def get_orientations_possible(block: np.ndarray) -> List[List[dict]]:
@@ -83,9 +85,14 @@ def get_orientations_possible(block: np.ndarray) -> List[List[dict]]:
 
     if height == depth == width:
         return poss  # return all possibilities, it's a cube
-
-    # TODO: Complete this function for the other situations...
-    # Hint, the results will be parts of the 23-item list above, read the Docstring!
+    rotations = []
+    for combo in poss:
+        r = block  # start with a view of block, unmodified for comparison
+        for r90 in combo:  # apply all the rotations given in this combination
+            r = np.rot90(r, k=r90['k'], axes=r90['axes'])
+        if r.shape == block.shape:
+            rotations.append(combo)
+    return rotations
 
 
 def carve_sculpture_from_density_block(shape: np.ndarray, block: np.ndarray) -> np.ndarray:
@@ -98,10 +105,24 @@ def carve_sculpture_from_density_block(shape: np.ndarray, block: np.ndarray) -> 
     :param block: array describing densities throughout the raw material block
     :return: array of densities in the resulting sculpture, in same orientation.
     :raises: ValueError if the input arrays don't match in size and shape.
-    """
-    # TODO: write the code for this function, which could be as short as one line of code!
-    # TODO: Add a few good, working Doctests
 
+    >>> s = np.array([[1,0], [1,0],[1,0]])
+    >>> b = np.array([[3.4, 4.2], [5.2,6.2], [7.2,8.2]])
+    >>> carve_sculpture_from_density_block(s,b)
+    array([[3.4, nan],
+           [5.2, nan],
+           [7.2, nan]])
+
+    >>> s = np.array([[1,0], [1,0], [1,0]])
+    >>> b = np.array([[3.2,4.2],[5.2,4.2]])
+    >>> carve_sculpture_from_density_block(s,b)
+    Traceback (most recent call last):
+    ValueError: Shape and Block don't match in size and shape!
+    """
+    if shape.shape != block.shape:
+        raise ValueError ("Shape and Block don't match in size and shape!")
+    else:
+        return np.where(shape == 1, block, np.nan)
 
 def is_stable(sculpture: np.ndarray) -> bool:
     """Given a 'sculpted' NDarray, where number values represent densities and
@@ -109,9 +130,28 @@ def is_stable(sculpture: np.ndarray) -> bool:
     given, whether it will sit stably upon its base.
 
     :param sculpture: NDarray representing a sculpture of variable density material.
+
+    >>> sculpture = np.array([[[3.4, 0, 4.5], [4.5, 0, 4.0]], [[5.6, 7.8, 0], [5.4, 3.2, 2.2]]])
+    >>> is_stable(sculpture)
+    True
+
+    >>> marble_block_1 = np.load(file='data/marble_block_1.npy')
+    >>> is_stable(marble_block_1)
+    True
     """
-    # TODO: Complete this function.
-    # TODO: Add a few good, working Doctests
+    base = sculpture[-1]
+    base = np.where(base == np.nan, base, 0)
+    feet = np.nonzero(base)
+    feet_coords = np.stack(feet, axis=-1)
+    masscenter = center_of_mass(sculpture)
+    masscenter = np.array(masscenter[1:])
+    coods_w_mass = np.append(feet_coords, [masscenter], axis=0)
+    hull = ConvexHull(feet_coords)
+    hull_mass = ConvexHull(coods_w_mass)
+    if hull.area == hull_mass.area:
+        return True
+    else:
+        return False
 
 
 def analyze_sculptures(block_filenames: list, shape_filenames: list):
@@ -124,6 +164,29 @@ def analyze_sculptures(block_filenames: list, shape_filenames: list):
     :param shape_filenames:
     :return:
     """
+
+    outfile = open("output.txt", "w")
+    for shape_file in shape_filenames:
+        outfile.write(shape_file)
+        shape = np.load(shape_file)
+        for block_file in block_filenames:
+            outfile.write(block_file)
+            block = np.load(block_file)
+            rotations = get_orientations_possible(block)
+            for rotation in rotations:
+                r = block  # start with a view of block unmodified for comparison
+                for r90 in rotation:  # apply all the rotations given in this combination
+                    r = np.rot90(r, k=r90['k'], axes=r90['axes'])
+                    outfile.write('Rotation: {} axes {}'.format(['k'], ['axes']))
+                sculpture = carve_sculpture_from_density_block(shape, r)
+                stable = is_stable(sculpture)
+                if stable == True:
+                    outfile.write('Stability: Stable')
+                else:
+                    outfile.write('Stability: Unstable')
+                density = np.nanmean(sculpture)
+                outfile.write('mean density: {:.2f}'.format(density.astype('float32')))
+
     # TODO: Complete this function.
     # TODO: Add a few good, working Doctests
 
@@ -196,17 +259,10 @@ def are_rotations_unique(list_of_rotations: List[List[dict]], verbose=False) -> 
 
 
 if __name__ == '__main__':
+    block_list = glob.glob('data/marble*.npy')
 
-    # This section will need to be changed significantly. What's here are
-    #  just some examples of loading and manipulating the arrays.
+    shape_list = glob.glob('data/shape*.npy')
 
-    # Load a "block" of variable-density marble:
-    marble_block_1 = np.load(file='data/marble_block_1.npy')
+    analyze_sculptures(block_list, shape_list)
 
-    # Load one array describing the 3D shape of the sculpture we want to carve from marble:
-    shape_1 = np.load(file='data/shape_1.npy')
 
-    print(marble_block_1.shape)
-    print(shape_1.shape)
-
-    print('mean density of unmodified block: {:.2f}'.format(np.nanmean(marble_block_1.astype('float32'))))
