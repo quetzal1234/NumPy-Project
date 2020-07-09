@@ -139,11 +139,11 @@ def is_stable(sculpture: np.ndarray) -> bool:
     >>> is_stable(marble_block_1)
     True
     """
-    base = sculpture[-1]
-    base = np.where(base == np.nan, base, 0)
+    no_nan_sculpture = np.nan_to_num(sculpture, nan=0)
+    base = no_nan_sculpture[-1]
     feet = np.nonzero(base)
     feet_coords = np.stack(feet, axis=-1)
-    masscenter = center_of_mass(sculpture)
+    masscenter = center_of_mass(no_nan_sculpture)
     masscenter = np.array(masscenter[1:])
     coods_w_mass = np.append(feet_coords, [masscenter], axis=0)
     hull = ConvexHull(feet_coords)
@@ -163,6 +163,11 @@ def analyze_sculptures(block_filenames: list, shape_filenames: list):
     :param block_filenames:
     :param shape_filenames:
     :return:
+
+    >>> block_filename = ["data/marble_block_1.npy"]
+    >>> shape_filename = ["data/shape_1.npy"]
+    >>> analyze_sculptures(block_filename, shape_filename) #return output file
+
     """
 
     outfile = open("output.txt", "w")
@@ -179,17 +184,15 @@ def analyze_sculptures(block_filenames: list, shape_filenames: list):
                     r = np.rot90(r, k=r90['k'], axes=r90['axes'])
                     outfile.write('Rotation: {} axes {}'.format(['k'], ['axes']))
                 sculpture = carve_sculpture_from_density_block(shape, r)
+                density = np.nanmean(sculpture)
+                outfile.write('mean density: {:.2f}'.format(density.astype('float32')))
                 stable = is_stable(sculpture)
                 if stable == True:
                     outfile.write('Stability: Stable')
                 else:
                     outfile.write('Stability: Unstable')
-                density = np.nanmean(sculpture)
-                outfile.write('mean density: {:.2f}'.format(density.astype('float32')))
 
-    # TODO: Complete this function.
-    # TODO: Add a few good, working Doctests
-
+    outfile.close()
 
 def are_rotations_unique(list_of_rotations: List[List[dict]], verbose=False) -> bool:
     """Given a list of list of 3D rotation combinations suitable for using with np.rot90()
