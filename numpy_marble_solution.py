@@ -6,10 +6,10 @@ Assignment on Numpy: "High-Tech Sculptures"
 See assignment instructions in the README.md document AND in the
 TO DO comments below.
 """
-import glob
+import glob #https://docs.python.org/3/library/glob.html
 import numpy as np
-from scipy.ndimage import center_of_mass
-from scipy.spatial import ConvexHull, convex_hull_plot_2d
+from scipy.ndimage import center_of_mass #https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.ndimage.measurements.center_of_mass.html
+from scipy.spatial import ConvexHull, convex_hull_plot_2d #https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.ConvexHull.html
 from typing import List
 
 
@@ -86,7 +86,7 @@ def get_orientations_possible(block: np.ndarray) -> List[List[dict]]:
     if height == depth == width:
         return poss  # return all possibilities, it's a cube
     rotations = []
-    for combo in poss:
+    for combo in poss: #from are_rotations_unique function by Prof. Weible
         r = block  # start with a view of block, unmodified for comparison
         for r90 in combo:  # apply all the rotations given in this combination
             r = np.rot90(r, k=r90['k'], axes=r90['axes'])
@@ -144,10 +144,10 @@ def is_stable(sculpture: np.ndarray) -> bool:
     True
 
     """
-    no_nan_sculpture = np.nan_to_num(sculpture, nan=0)
-    base = no_nan_sculpture[-1]
-    feet = np.nonzero(base)
-    feet_coords = np.stack(feet, axis=-1)
+    no_nan_sculpture = np.nan_to_num(sculpture, nan=0) #from nan to num documentation https://numpy.org/doc/stable/reference/generated/numpy.nan_to_num.html
+    base = no_nan_sculpture[-1] #find base of sculpture
+    feet = np.nonzero(base) #coordinates of nonzero points in base
+    feet_coords = np.stack(feet, axis=-1) #from np.stack documentation https://numpy.org/doc/stable/reference/generated/numpy.stack.html
     masscenter = center_of_mass(no_nan_sculpture.astype('float32'))
     masscenter = np.array(masscenter[1:])
     coods_w_mass = np.append(feet_coords, [masscenter], axis=0)
@@ -200,14 +200,14 @@ def analyze_sculptures(block_filenames: list, shape_filenames: list):
             print('\n')
             block = np.load(block_file)
             rotations = get_orientations_possible(block)
-            for rotation in rotations:
+            for rotation in rotations: #from are_rotations_unique function by Prof. Weible
                 r = block  # start with a view of block unmodified for comparison
                 for r90 in rotation:  # apply all the rotations given in this combination
                     r = np.rot90(r, k=r90['k'], axes=r90['axes'])
                     print('Rotation: {} axes {} \t'.format(r90['k'], r90['axes']))
                 sculpture = carve_sculpture_from_density_block(shape, r)
                 density = (np.nanmean(sculpture.astype('float32')))
-                print('\tmean density: {:.2f} \t'.format(density))
+                print('\tmean density: {:.2f} \t'.format(density)) #from main function by prof Weible
                 stable = is_stable(sculpture)
                 if stable == True:
                     print('Stability: Stable \t \n')
