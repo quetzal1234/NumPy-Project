@@ -25,45 +25,45 @@ Rotation: 1 axes (1, 2) 	Rotation: 2 axes (0, 2) 		mean density: 56.63 	Stabilit
 Rotation: 3 axes (1, 2) 	Rotation: 2 axes (0, 2) 		mean density: 56.63 	Stability: Stable 	 
 data\marble_block_4.npy
 Rotation: 2 axes (0, 1) 		mean density: 56.62 	Stability: Stable 	 
-Rotation: 2 axes (0, 2) 		mean density: 56.62 	Stability: Stable 	 
+Rotation: 2 axes (0, 2) 		mean density: 56.62 	Stability: Unstable 	 
 Rotation: 1 axes (1, 2) 		mean density: 56.64 	Stability: Stable 	 
 Rotation: 2 axes (1, 2) 		mean density: 56.64 	Stability: Stable 	 
-Rotation: 3 axes (1, 2) 		mean density: 56.64 	Stability: Stable 	 
-Rotation: 1 axes (1, 2) 	Rotation: 2 axes (0, 2) 		mean density: 56.62 	Stability: Stable 	 
+Rotation: 3 axes (1, 2) 		mean density: 56.64 	Stability: Unstable 	 
+Rotation: 1 axes (1, 2) 	Rotation: 2 axes (0, 2) 		mean density: 56.62 	Stability: Unstable 	 
 Rotation: 3 axes (1, 2) 	Rotation: 2 axes (0, 2) 		mean density: 56.62 	Stability: Stable 	 
 data\marble_block_5.npy
-Rotation: 2 axes (0, 1) 		mean density: 13.15 	Stability: Stable 	 
+Rotation: 2 axes (0, 1) 		mean density: 13.15 	Stability: Unstable 	 
 Rotation: 2 axes (0, 2) 		mean density: 13.15 	Stability: Stable 	 
-Rotation: 1 axes (1, 2) 		mean density: 75.56 	Stability: Stable 	 
-Rotation: 2 axes (1, 2) 		mean density: 75.56 	Stability: Stable 	 
+Rotation: 1 axes (1, 2) 		mean density: 75.56 	Stability: Unstable 	 
+Rotation: 2 axes (1, 2) 		mean density: 75.56 	Stability: Unstable 	 
 Rotation: 3 axes (1, 2) 		mean density: 75.56 	Stability: Stable 	 
 Rotation: 1 axes (1, 2) 	Rotation: 2 axes (0, 2) 		mean density: 13.15 	Stability: Stable 	 
-Rotation: 3 axes (1, 2) 	Rotation: 2 axes (0, 2) 		mean density: 13.15 	Stability: Stable 	 
+Rotation: 3 axes (1, 2) 	Rotation: 2 axes (0, 2) 		mean density: 13.15 	Stability: Unstable 	 
 data\shape_2.npy
 data\marble_block_1.npy
-Rotation: 2 axes (0, 1) 		mean density: 51.52 	Stability: Unstable 	 
-Rotation: 2 axes (0, 2) 		mean density: 51.52 	Stability: Unstable 	 
-Rotation: 1 axes (1, 2) 		mean density: 51.53 	Stability: Unstable 	 
-Rotation: 2 axes (1, 2) 		mean density: 51.53 	Stability: Unstable 	 
-Rotation: 3 axes (1, 2) 		mean density: 51.53 	Stability: Unstable 	 
-Rotation: 1 axes (1, 2) 	Rotation: 2 axes (0, 2) 		mean density: 51.52 	Stability: Unstable 	 
-Rotation: 3 axes (1, 2) 	Rotation: 2 axes (0, 2) 		mean density: 51.52 	Stability: Unstable 	 
+Rotation: 2 axes (0, 1) 		mean density: 51.52 	Stability: Stable 	 
+Rotation: 2 axes (0, 2) 		mean density: 51.52 	Stability: Stable 	 
+Rotation: 1 axes (1, 2) 		mean density: 51.53 	Stability: Stable 	 
+Rotation: 2 axes (1, 2) 		mean density: 51.53 	Stability: Stable 	 
+Rotation: 3 axes (1, 2) 		mean density: 51.53 	Stability: Stable 	 
+Rotation: 1 axes (1, 2) 	Rotation: 2 axes (0, 2) 		mean density: 51.52 	Stability: Stable 	 
+Rotation: 3 axes (1, 2) 	Rotation: 2 axes (0, 2) 		mean density: 51.52 	Stability: Stable 	 
 data\marble_block_2.npy
-Rotation: 2 axes (0, 1) 		mean density: 42.85 	Stability: Unstable 	 
-Rotation: 2 axes (0, 2) 		mean density: 42.85 	Stability: Unstable 	 
-Rotation: 1 axes (1, 2) 		mean density: 42.85 	Stability: Unstable 	 
-Rotation: 2 axes (1, 2) 		mean density: 42.85 	Stability: Unstable 	 
-Rotation: 3 axes (1, 2) 		mean density: 42.85 	Stability: Unstable 	 
-Rotation: 1 axes (1, 2) 	Rotation: 2 axes (0, 2) 		mean density: 42.85 	Stability: Unstable 	 
-Rotation: 3 axes (1, 2) 	Rotation: 2 axes (0, 2) 		mean density: 42.85 	Stability: Unstable 	 
+Rotation: 2 axes (0, 1) 		mean density: 42.85 	Stability: Stable 	 
+Rotation: 2 axes (0, 2) 		mean density: 42.85 	Stability: Stable 	 
+Rotation: 1 axes (1, 2) 		mean density: 42.85 	Stability: Stable 	 
+Rotation: 2 axes (1, 2) 		mean density: 42.85 	Stability: Stable 	 
+Rotation: 3 axes (1, 2) 		mean density: 42.85 	Stability: Stable 	 
+Rotation: 1 axes (1, 2) 	Rotation: 2 axes (0, 2) 		mean density: 42.85 	Stability: Stable 	 
+Rotation: 3 axes (1, 2) 	Rotation: 2 axes (0, 2) 		mean density: 42.85 	Stability: Stable 	 
 data\marble_block_3.npy
-Rotation: 2 axes (0, 1) 		mean density: 56.66 	Stability: Unstable 	 
-Rotation: 2 axes (0, 2) 		mean density: 56.66 	Stability: Unstable 	 
-Rotation: 1 axes (1, 2) 		mean density: 56.66 	Stability: Unstable 	 
-Rotation: 2 axes (1, 2) 		mean density: 56.66 	Stability: Unstable 	 
-Rotation: 3 axes (1, 2) 		mean density: 56.66 	Stability: Unstable 	 
-Rotation: 1 axes (1, 2) 	Rotation: 2 axes (0, 2) 		mean density: 56.66 	Stability: Unstable 	 
-Rotation: 3 axes (1, 2) 	Rotation: 2 axes (0, 2) 		mean density: 56.66 	Stability: Unstable 	 
+Rotation: 2 axes (0, 1) 		mean density: 56.66 	Stability: Stable 	 
+Rotation: 2 axes (0, 2) 		mean density: 56.66 	Stability: Stable 	 
+Rotation: 1 axes (1, 2) 		mean density: 56.66 	Stability: Stable 	 
+Rotation: 2 axes (1, 2) 		mean density: 56.66 	Stability: Stable 	 
+Rotation: 3 axes (1, 2) 		mean density: 56.66 	Stability: Stable 	 
+Rotation: 1 axes (1, 2) 	Rotation: 2 axes (0, 2) 		mean density: 56.66 	Stability: Stable 	 
+Rotation: 3 axes (1, 2) 	Rotation: 2 axes (0, 2) 		mean density: 56.66 	Stability: Stable 	 
 data\marble_block_4.npy
 Rotation: 2 axes (0, 1) 		mean density: 55.61 	Stability: Unstable 	 
 Rotation: 2 axes (0, 2) 		mean density: 55.61 	Stability: Unstable 	 

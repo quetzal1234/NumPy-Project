@@ -135,15 +135,20 @@ def is_stable(sculpture: np.ndarray) -> bool:
     >>> is_stable(sculpture)
     True
 
+    >>> sculpture = np.array([[3.4, 4.2, 0, 0 ], [3.2, 2, 0, 0]], [[4.2, 2, 0, 0], [5.2, 3.2, 0, 0]])
+    >>> is_stable(sculpture)
+    False
+
     >>> marble_block_1 = np.load(file='data/marble_block_1.npy')
     >>> is_stable(marble_block_1)
     True
+
     """
     no_nan_sculpture = np.nan_to_num(sculpture, nan=0)
     base = no_nan_sculpture[-1]
     feet = np.nonzero(base)
     feet_coords = np.stack(feet, axis=-1)
-    masscenter = center_of_mass(no_nan_sculpture)
+    masscenter = center_of_mass(no_nan_sculpture.astype('float32'))
     masscenter = np.array(masscenter[1:])
     coods_w_mass = np.append(feet_coords, [masscenter], axis=0)
     hull = ConvexHull(feet_coords)
