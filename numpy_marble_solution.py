@@ -166,8 +166,11 @@ def analyze_sculptures(block_filenames: list, shape_filenames: list):
 
     >>> block_filename = ["data/marble_block_1.npy"]
     >>> shape_filename = ["data/shape_1.npy"]
-    >>> analyze_sculptures(block_filename, shape_filename) #return output file
+    >>> analyze_sculptures(block_filename, shape_filename) #write output file
 
+    >>> block_filename = ["data/marble_block_2.npy"]
+    >>> shape_filename = ["data/shape_2.npy"]
+    >>> analyze_sculptures(block_filename, shape_filename) #write output file
     """
 
     outfile = open("output.txt", "w")
@@ -184,10 +187,10 @@ def analyze_sculptures(block_filenames: list, shape_filenames: list):
                 r = block  # start with a view of block unmodified for comparison
                 for r90 in rotation:  # apply all the rotations given in this combination
                     r = np.rot90(r, k=r90['k'], axes=r90['axes'])
-                    outfile.write('Rotation: {} axes {}'.format(r90['k'], r90['axes']))
+                    outfile.write('Rotation: {} axes {} \t'.format(r90['k'], r90['axes']))
                 sculpture = carve_sculpture_from_density_block(shape, r)
-                density = np.nanmean(sculpture)
-                outfile.write('\tmean density: {:.2f} \t'.format(density.astype('float32')))
+                density = (np.nanmean(sculpture.astype('float32')))
+                outfile.write('\tmean density: {:.2f} \t'.format(density))
                 stable = is_stable(sculpture)
                 if stable == True:
                     outfile.write('Stability: Stable \t \n')
