@@ -171,36 +171,48 @@ def analyze_sculptures(block_filenames: list, shape_filenames: list):
 
     >>> block_filename = ["data/marble_block_1.npy"]
     >>> shape_filename = ["data/shape_1.npy"]
-    >>> analyze_sculptures(block_filename, shape_filename) #write output file
+    >>> analyze_sculptures(block_filename, shape_filename) # doctest: +ELLIPSIS
+    data\shape_1.npy ...
+    Rotation: 3 axes (1, 2)
+    Rotation: 2 axes (0, 2)
+        mean density: 51.50
+    Stability: Stable
+
 
     >>> block_filename = ["data/marble_block_2.npy"]
     >>> shape_filename = ["data/shape_2.npy"]
-    >>> analyze_sculptures(block_filename, shape_filename) #write output file
+    >>> analyze_sculptures(block_filename, shape_filename) # doctest: +ELLIPSIS
+    data\shape_2.npy...
+    Rotation: 3 axes (1, 2)
+    Rotation: 2 axes (0, 2)
+        mean density: 42.85
+    Stability: Stable
+
     """
 
     outfile = open("output.txt", "w")
     for shape_file in shape_filenames:
-        outfile.write(shape_file)
-        outfile.write('\n')
+        print(shape_file)
+        print('\n')
         shape = np.load(shape_file)
         for block_file in block_filenames:
-            outfile.write(block_file)
-            outfile.write('\n')
+            print(block_file)
+            print('\n')
             block = np.load(block_file)
             rotations = get_orientations_possible(block)
             for rotation in rotations:
                 r = block  # start with a view of block unmodified for comparison
                 for r90 in rotation:  # apply all the rotations given in this combination
                     r = np.rot90(r, k=r90['k'], axes=r90['axes'])
-                    outfile.write('Rotation: {} axes {} \t'.format(r90['k'], r90['axes']))
+                    print('Rotation: {} axes {} \t'.format(r90['k'], r90['axes']))
                 sculpture = carve_sculpture_from_density_block(shape, r)
                 density = (np.nanmean(sculpture.astype('float32')))
-                outfile.write('\tmean density: {:.2f} \t'.format(density))
+                print('\tmean density: {:.2f} \t'.format(density))
                 stable = is_stable(sculpture)
                 if stable == True:
-                    outfile.write('Stability: Stable \t \n')
+                    print('Stability: Stable \t \n')
                 else:
-                    outfile.write('Stability: Unstable \t \n')
+                    print('Stability: Unstable \t \n')
 
     outfile.close()
 
