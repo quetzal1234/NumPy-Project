@@ -173,24 +173,26 @@ def analyze_sculptures(block_filenames: list, shape_filenames: list):
     outfile = open("output.txt", "w")
     for shape_file in shape_filenames:
         outfile.write(shape_file)
+        outfile.write('\n')
         shape = np.load(shape_file)
         for block_file in block_filenames:
             outfile.write(block_file)
+            outfile.write('\n')
             block = np.load(block_file)
             rotations = get_orientations_possible(block)
             for rotation in rotations:
                 r = block  # start with a view of block unmodified for comparison
                 for r90 in rotation:  # apply all the rotations given in this combination
                     r = np.rot90(r, k=r90['k'], axes=r90['axes'])
-                    outfile.write('Rotation: {} axes {}'.format(['k'], ['axes']))
+                    outfile.write('Rotation: {} axes {}'.format(r90['k'], r90['axes']))
                 sculpture = carve_sculpture_from_density_block(shape, r)
                 density = np.nanmean(sculpture)
-                outfile.write('mean density: {:.2f}'.format(density.astype('float32')))
+                outfile.write('\tmean density: {:.2f} \t'.format(density.astype('float32')))
                 stable = is_stable(sculpture)
                 if stable == True:
-                    outfile.write('Stability: Stable')
+                    outfile.write('Stability: Stable \t \n')
                 else:
-                    outfile.write('Stability: Unstable')
+                    outfile.write('Stability: Unstable \t \n')
 
     outfile.close()
 

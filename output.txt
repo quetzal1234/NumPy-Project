@@ -1,1 +1,82 @@
-data\shape_1.npydata\marble_block_1.npyRotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']Rotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']Rotation: ['k'] axes ['axes']mean density: infStability: Stabledata\marble_block_2.npyRotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']Rotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']Rotation: ['k'] axes ['axes']mean density: infStability: Stabledata\marble_block_3.npyRotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']Rotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']Rotation: ['k'] axes ['axes']mean density: infStability: Stabledata\marble_block_4.npyRotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']Rotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']Rotation: ['k'] axes ['axes']mean density: infStability: Stabledata\marble_block_5.npyRotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']Rotation: ['k'] axes ['axes']mean density: infStability: StableRotation: ['k'] axes ['axes']Rotation: ['k'] axes ['axes']mean density: infStability: Stabledata\shape_2.npydata\marble_block_1.npyRotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']Rotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']Rotation: ['k'] axes ['axes']mean density: infStability: Unstabledata\marble_block_2.npyRotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']Rotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']Rotation: ['k'] axes ['axes']mean density: infStability: Unstabledata\marble_block_3.npyRotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']Rotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']Rotation: ['k'] axes ['axes']mean density: infStability: Unstabledata\marble_block_4.npyRotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']Rotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']Rotation: ['k'] axes ['axes']mean density: infStability: Unstabledata\marble_block_5.npyRotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']Rotation: ['k'] axes ['axes']mean density: infStability: UnstableRotation: ['k'] axes ['axes']Rotation: ['k'] axes ['axes']mean density: infStability: Unstable
+data\shape_1.npy
+data\marble_block_1.npy
+Rotation: 2 axes (0, 1)	mean density: inf 	Stability: Stable 	 
+Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Stable 	 
+Rotation: 1 axes (1, 2)	mean density: inf 	Stability: Stable 	 
+Rotation: 2 axes (1, 2)	mean density: inf 	Stability: Stable 	 
+Rotation: 3 axes (1, 2)	mean density: inf 	Stability: Stable 	 
+Rotation: 1 axes (1, 2)Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Stable 	 
+Rotation: 3 axes (1, 2)Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Stable 	 
+data\marble_block_2.npy
+Rotation: 2 axes (0, 1)	mean density: inf 	Stability: Stable 	 
+Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Stable 	 
+Rotation: 1 axes (1, 2)	mean density: inf 	Stability: Stable 	 
+Rotation: 2 axes (1, 2)	mean density: inf 	Stability: Stable 	 
+Rotation: 3 axes (1, 2)	mean density: inf 	Stability: Stable 	 
+Rotation: 1 axes (1, 2)Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Stable 	 
+Rotation: 3 axes (1, 2)Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Stable 	 
+data\marble_block_3.npy
+Rotation: 2 axes (0, 1)	mean density: inf 	Stability: Stable 	 
+Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Stable 	 
+Rotation: 1 axes (1, 2)	mean density: inf 	Stability: Stable 	 
+Rotation: 2 axes (1, 2)	mean density: inf 	Stability: Stable 	 
+Rotation: 3 axes (1, 2)	mean density: inf 	Stability: Stable 	 
+Rotation: 1 axes (1, 2)Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Stable 	 
+Rotation: 3 axes (1, 2)Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Stable 	 
+data\marble_block_4.npy
+Rotation: 2 axes (0, 1)	mean density: inf 	Stability: Stable 	 
+Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Stable 	 
+Rotation: 1 axes (1, 2)	mean density: inf 	Stability: Stable 	 
+Rotation: 2 axes (1, 2)	mean density: inf 	Stability: Stable 	 
+Rotation: 3 axes (1, 2)	mean density: inf 	Stability: Stable 	 
+Rotation: 1 axes (1, 2)Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Stable 	 
+Rotation: 3 axes (1, 2)Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Stable 	 
+data\marble_block_5.npy
+Rotation: 2 axes (0, 1)	mean density: inf 	Stability: Stable 	 
+Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Stable 	 
+Rotation: 1 axes (1, 2)	mean density: inf 	Stability: Stable 	 
+Rotation: 2 axes (1, 2)	mean density: inf 	Stability: Stable 	 
+Rotation: 3 axes (1, 2)	mean density: inf 	Stability: Stable 	 
+Rotation: 1 axes (1, 2)Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Stable 	 
+Rotation: 3 axes (1, 2)Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Stable 	 
+data\shape_2.npy
+data\marble_block_1.npy
+Rotation: 2 axes (0, 1)	mean density: inf 	Stability: Unstable 	 
+Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Unstable 	 
+Rotation: 1 axes (1, 2)	mean density: inf 	Stability: Unstable 	 
+Rotation: 2 axes (1, 2)	mean density: inf 	Stability: Unstable 	 
+Rotation: 3 axes (1, 2)	mean density: inf 	Stability: Unstable 	 
+Rotation: 1 axes (1, 2)Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Unstable 	 
+Rotation: 3 axes (1, 2)Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Unstable 	 
+data\marble_block_2.npy
+Rotation: 2 axes (0, 1)	mean density: inf 	Stability: Unstable 	 
+Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Unstable 	 
+Rotation: 1 axes (1, 2)	mean density: inf 	Stability: Unstable 	 
+Rotation: 2 axes (1, 2)	mean density: inf 	Stability: Unstable 	 
+Rotation: 3 axes (1, 2)	mean density: inf 	Stability: Unstable 	 
+Rotation: 1 axes (1, 2)Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Unstable 	 
+Rotation: 3 axes (1, 2)Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Unstable 	 
+data\marble_block_3.npy
+Rotation: 2 axes (0, 1)	mean density: inf 	Stability: Unstable 	 
+Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Unstable 	 
+Rotation: 1 axes (1, 2)	mean density: inf 	Stability: Unstable 	 
+Rotation: 2 axes (1, 2)	mean density: inf 	Stability: Unstable 	 
+Rotation: 3 axes (1, 2)	mean density: inf 	Stability: Unstable 	 
+Rotation: 1 axes (1, 2)Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Unstable 	 
+Rotation: 3 axes (1, 2)Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Unstable 	 
+data\marble_block_4.npy
+Rotation: 2 axes (0, 1)	mean density: inf 	Stability: Unstable 	 
+Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Unstable 	 
+Rotation: 1 axes (1, 2)	mean density: inf 	Stability: Unstable 	 
+Rotation: 2 axes (1, 2)	mean density: inf 	Stability: Unstable 	 
+Rotation: 3 axes (1, 2)	mean density: inf 	Stability: Unstable 	 
+Rotation: 1 axes (1, 2)Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Unstable 	 
+Rotation: 3 axes (1, 2)Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Unstable 	 
+data\marble_block_5.npy
+Rotation: 2 axes (0, 1)	mean density: inf 	Stability: Unstable 	 
+Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Unstable 	 
+Rotation: 1 axes (1, 2)	mean density: inf 	Stability: Unstable 	 
+Rotation: 2 axes (1, 2)	mean density: inf 	Stability: Unstable 	 
+Rotation: 3 axes (1, 2)	mean density: inf 	Stability: Unstable 	 
+Rotation: 1 axes (1, 2)Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Unstable 	 
+Rotation: 3 axes (1, 2)Rotation: 2 axes (0, 2)	mean density: inf 	Stability: Unstable 	 
